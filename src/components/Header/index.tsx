@@ -1,17 +1,22 @@
 import { HeaderContainer, LocalityTag } from "./styles";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../../assets/Logo";
-import { ShoppingCart } from "phosphor-react";
+import { MapPin, ShoppingCart } from "phosphor-react";
 
 export function Header() {
     return(
         <HeaderContainer>
             <nav>
-            <Logo />
+                <NavLink to="/" title="Home">
+                    <Logo />
+                </NavLink>
             <div>
-                <LocalityTag />
+                <LocalityTag>
+                    <MapPin size={24} weight="fill" />
+                    Itapajé, CE
+                </LocalityTag>
                 <NavLink to="/checkout" title="Checkout">
-                    <ShoppingCart />
+                    <ShoppingCart size={24} weight="fill"/>
                 </NavLink>
             </div>
             </nav>
