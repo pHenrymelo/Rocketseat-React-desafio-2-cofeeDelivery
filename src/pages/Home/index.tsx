@@ -1,39 +1,40 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
+import { BannerIconsContainer, BannerTextContainer, HomeBanner, HomeContainer } from './styles'
 import cover from '../../assets/cover.svg'
 
 export function Home() {
     return(
-        <div>
-            <div>
-                <div>
+        <HomeContainer>
+            <HomeBanner>
+                <BannerTextContainer>
                     <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-                    <p>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
-                    <div>
+                    <h2>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</h2>
+                    <BannerIconsContainer>
                         <span>
-                            <ShoppingCart size={24} weight='fill'/>
+                            <ShoppingCart className='cart' size={24} weight='fill'/>
                             <p>Compra simples e segura</p>
                         </span>
                         <span>
-                            <Package size={24} weight='fill' />
+                            <Package size={24} className='packege' weight='fill' />
                             <p>Embalagem mantem o café intacto</p>
                         </span>
                         <span>
-                            <Timer size={24} weight='fill'/>
+                            <Timer size={24} className='timer' weight='fill'/>
                             <p>Entrega rápida e rastreada</p>
                         </span>
                         <span>
-                            <Coffee size={24} weight='fill' />
+                            <Coffee size={24} className='coffee' weight='fill' />
                             <p>O café chega fresquinho até você</p>
                         </span>
-                    </div>
-                </div>
+                    </BannerIconsContainer>
+                </BannerTextContainer>
                 <aside>
                     <img src={cover} alt="copo de café ao centro com grãos e po de café em um fundo amarelo" />
                 </aside>
-            </div>
+            </HomeBanner>
             <main>
                 CAFES
             </main>
-        </div>
+        </HomeContainer>
     )
 }
