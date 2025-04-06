@@ -1,6 +1,7 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
-import { BannerIconsContainer, BannerTextContainer, HomeBanner, HomeContainer } from './styles'
+import { BannerIconsContainer, BannerTextContainer, CoffeeMenu, CoffeeMenuContainer, HomeBanner, HomeContainer } from './styles'
 import cover from '../../assets/cover.svg'
+import { CoffeeCard } from './components/CoffeeCard'
 
 export function Home() {
     return(
@@ -32,9 +33,25 @@ export function Home() {
                     <img src={cover} alt="copo de café ao centro com grãos e po de café em um fundo amarelo" />
                 </aside>
             </HomeBanner>
-            <main>
-                CAFES
-            </main>
+            <CoffeeMenuContainer>
+                <h2>Nossos cafés</h2>
+                <CoffeeMenu>
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                    <CoffeeCard />
+                </CoffeeMenu>
+            </CoffeeMenuContainer>
         </HomeContainer>
     )
 }

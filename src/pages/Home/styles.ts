@@ -31,13 +31,14 @@ export const BannerTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 
   h1{
-    font-family: 'Baloo 2';
-    font-size: 3rem;
-    line-height: 1.3;
-    font-weight: 900;
     color:  ${props => props.theme["base-title"]};
+    font-family: 'Baloo 2';
+    line-height: 1.3;
+    font-size: 3rem;
+    font-weight: 900;
   }
 
   h2{
@@ -57,7 +58,7 @@ export const BannerIconsContainer = styled.div`
   span{
     display: flex;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.3;
     gap: 0.5rem;
 
@@ -84,5 +85,29 @@ export const BannerIconsContainer = styled.div`
     color: ${props => props.theme["background"]};
   }
 
+`
+
+export const CoffeeMenuContainer = styled.div`
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 6rem;
+  padding-block: 2rem;
+  gap: 2rem;
+
+  h2{
+    color:  ${props => props.theme["base-title"]};
+    font-family: 'Baloo 2';
+    line-height: 1.3;
+    font-size: 2rem;
+  }
+
+`
+
+export const CoffeeMenu = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 
 `
