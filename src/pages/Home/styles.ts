@@ -14,6 +14,8 @@ export const HomeBanner = styled.div`
   width: 100%;
   height: 34rem;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   background: url(${background}) no-repeat;
   background-size: cover;
   padding-inline: 6rem;
@@ -28,6 +30,7 @@ export const HomeBanner = styled.div`
 `
 
 export const BannerTextContainer = styled.div`
+  max-width: 36.75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,6 +53,7 @@ export const BannerTextContainer = styled.div`
 `
 
 export const BannerIconsContainer = styled.div`
+  max-width: 35rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -89,7 +93,7 @@ export const BannerIconsContainer = styled.div`
 
 export const CoffeeMenuContainer = styled.div`
   flex: 1;
-  width: 100%;
+  max-width: 70rem;
   display: flex;
   flex-direction: column;
   padding-inline: 6rem;
@@ -106,7 +110,9 @@ export const CoffeeMenuContainer = styled.div`
 `
 
 export const CoffeeMenu = styled.div`
+  max-width: 70rem;
   display: grid;
+  margin-inline: auto;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 

@@ -98,7 +98,9 @@ export const CoffeeCardActions = styled.div`
     border-radius: 8px;
     color: ${props => props.theme["background"]};
     background: ${props => props.theme["purple-dark"]};
-    padding: 0.25rem;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
   }
 
 `

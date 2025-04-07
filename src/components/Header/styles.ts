@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+    max-width: 90rem;
     display: flex;
     height: 6.5rem;
-    padding: 2rem 6rem;
+    padding: 2rem;
+    margin-inline: auto;
 
     nav {
         flex: 1;
