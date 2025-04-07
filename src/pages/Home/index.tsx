@@ -1,6 +1,7 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { BannerIconsContainer, BannerTextContainer, CoffeeMenu, CoffeeMenuContainer, HomeBanner, HomeContainer } from './styles'
 import cover from '../../assets/cover.svg'
+import {data} from '../../dataset/coffeeData'
 import { CoffeeCard } from './components/CoffeeCard'
 
 export function Home() {
@@ -36,20 +37,7 @@ export function Home() {
             <CoffeeMenuContainer>
                 <h2>Nossos cafés</h2>
                 <CoffeeMenu>
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
+                    {data.map((Coffee) => (<CoffeeCard id={Coffee.id} name={Coffee.name} description={Coffee.description} picture={Coffee.picture} tags={Coffee.tags} />))}
                 </CoffeeMenu>
             </CoffeeMenuContainer>
         </HomeContainer>

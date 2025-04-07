@@ -1,18 +1,17 @@
 import { CoffeeCardActions, CoffeeCardContainer, CoffeeCardInfo, CoffeeCardTags } from "./styles";
-import coffeeImg from '../../../../assets/Type=Americano.svg'
 import { ShoppingCart } from "phosphor-react";
+import { Coffee } from '../../../../dataset/coffeeData'
 
-export function CoffeeCard() {
+export function CoffeeCard({id, description, name, picture, tags}:Coffee) {
   return(
-    <CoffeeCardContainer>
-      <img src={coffeeImg}/>
+    <CoffeeCardContainer key={id}>
+      <img src={picture}/>
       <CoffeeCardTags>
-        <span>TRADICIONAL</span>
-        <span>COM LEITE</span>
+        { tags.map((tag) => <span> {tag} </span>) }
       </CoffeeCardTags>
       <CoffeeCardInfo>
-        <h3>Nome do Café</h3>
-        <p>Descrição das caracteristicas e preparo do café</p>
+        <h3>{name}</h3>
+        <p>{description}</p>
       </CoffeeCardInfo>
 
       <CoffeeCardActions>
