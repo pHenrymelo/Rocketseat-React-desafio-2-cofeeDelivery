@@ -1,7 +1,19 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { BannerIconsContainer, BannerTextContainer, CoffeeMenu, CoffeeMenuContainer, HomeBanner, HomeContainer } from './styles'
 import cover from '../../assets/cover.svg'
+import data from '../../dataset/data.json'
 import { CoffeeCard } from './components/CoffeeCard'
+import { z } from 'zod'
+
+const coffeeSchema = z.object({
+    id: z.number(),
+    name: z.string(),
+    description: z.string(),
+    picture: z.string(),
+    tags: z.array(z.string())
+  })
+
+export type Coffee = z.infer <typeof coffeeSchema>
 
 export function Home() {
     return(
@@ -36,20 +48,7 @@ export function Home() {
             <CoffeeMenuContainer>
                 <h2>Nossos cafés</h2>
                 <CoffeeMenu>
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
-                    <CoffeeCard />
+                    {data.map((Coffee) => (<CoffeeCard id={Coffee.id} name={Coffee.name} description={Coffee.description} picture={Coffee.picture} tags={Coffee.tags} />))}
                 </CoffeeMenu>
             </CoffeeMenuContainer>
         </HomeContainer>
